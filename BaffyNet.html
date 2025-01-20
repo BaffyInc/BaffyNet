@@ -1,0 +1,79 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaffyNet - Новая страница</title>
+    <link rel = "shortcut icon"  href="BaffyNet.png" type="image/png">    
+    <style>
+        body {
+            background-color: #303030;
+            color: rgb(255, 255, 255);
+            text-align: center; 
+        }
+        h1 {
+            color: green; 
+        }
+        form {
+            margin-top: 20px; 
+        }
+    </style>
+</head>
+<body>
+
+   
+    <h1>BaffyNet</h1>
+
+    <form id="searchForm" onsubmit="handleSubmit(event);">
+        <label for="textInput"></label>
+        <input type="text" id="textInput" name="textInput" placeholder="Найдём всё!" required />
+        <input type="submit" value="Найти" />
+    </form>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); 
+            const query = document.getElementById('textInput').value; 
+            const url = `https://ya.ru/search/?text=${encodeURIComponent(query)}&lr=2&search_source=yaru_desktop_common&search_domain=yaru`;
+            window.location.href = url; 
+        }
+    </script>
+
+</body>
+</html>
+
+</style>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .content {
+            flex: 1;
+        }
+        .footer {
+            text-align: center; 
+            padding: 10px;
+            background-color: #303030; 
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        
+    
+    </div>
+    <div class="footer">
+        
+        <p>BaffyInc все права защищины 2024-2026</p>
+    </div>
+</body>
+</html>
